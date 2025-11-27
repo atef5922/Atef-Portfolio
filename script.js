@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.classList.contains(filter)) {
-                        card.style.display = 'flex'; /* Changed to Flex for button alignment */
+                        card.style.display = 'flex'; 
                     } else {
                         card.style.display = 'none';
                     }
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links li a'); // UPDATED SELECTOR
+    const navLinks = document.querySelectorAll('.nav-links li a'); 
     const header = document.querySelector('header');
 
     if (sections.length > 0 && navLinks.length > 0 && header) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cursorSpan = document.querySelector(".cursor");
 
     if (typedTextSpan && cursorSpan) {
-        const textArray = ["Web Developer", "Problem Solver", "Learner"];
+        const textArray = ["Front_End Developer", "Problem Solver", "Learner"];
         const typingDelay = 100;
         const erasingDelay = 50;
         const newTextDelay = 2000;
