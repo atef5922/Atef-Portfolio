@@ -35,6 +35,12 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     width: 90%;
@@ -197,6 +203,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .half1 {
@@ -254,8 +261,8 @@ header {
 }
 
 .half2 img {
-    width: 400px;
-    height: 400px;
+    width: min(80vw, 400px);
+    height: min(80vw, 400px);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     object-fit: cover;
     box-shadow: var(--shadow-lg);
@@ -325,6 +332,9 @@ header {
 
 .img-frame {
     position: relative;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .img-frame::before {
@@ -341,8 +351,9 @@ header {
 
 .img-frame img {
     position: relative;
-    width: 380px;
-    height: 450px;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     z-index: 1;
@@ -1049,16 +1060,31 @@ body.dark-mode .date-badge {
     }
 
     .half1 {
-        padding-right: 0;
-        margin-bottom: 60px;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .half1 h1 {
+        font-size: 3.2rem;
+    }
+
+    .half1 p.typing-text {
+        font-size: 1.4rem;
+    }
+
+    .half2 {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .about-buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .section-title-left {
@@ -1162,6 +1188,88 @@ body.dark-mode .date-badge {
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+    }
+
+    .section1 {
+        padding: 120px 0 70px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-actions {
+        gap: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-container {
+        gap: 30px;
+    }
+
+    .img-frame::before {
+        display: none;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        width: 100%;
+        margin: 0;
+        border-radius: 16px;
+    }
+
+    .timeline-container {
+        padding-left: 0;
+    }
+
+    .timeline-line {
+        left: 0;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+    }
+
+    .timeline-dot {
+        left: -5px;
+    }
+
+    .social-sidebar {
+        position: static;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
 @media (max-width: 600px) {
     .half1 h1 {
         font-size: 2.8rem;
@@ -1177,5 +1285,28 @@ body.dark-mode .date-badge {
 
     .contact-info {
         padding: 30px 20px;
+    }
+
+    .half1 p.typing-text {
+        font-size: 1.2rem;
+    }
+
+    .section2,
+    .skills-section,
+    .section3,
+    .project-section,
+    .education-section,
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .project-card,
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .about-buttons,
+    .hero-buttons {
+        gap: 12px;
     }
 }

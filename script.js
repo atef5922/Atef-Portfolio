@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- DARK MODE TOGGLE LOGIC START ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
 
-            // Switch Icon Class
+
             if (body.classList.contains('dark-mode')) {
                 themeToggleBtn.classList.remove('fa-moon');
                 themeToggleBtn.classList.add('fa-sun');
