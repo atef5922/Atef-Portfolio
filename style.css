@@ -71,7 +71,7 @@ header {
 
 .logo img {
     height: 90px;
-   padding-top: 5px;
+    padding-top: 5px;
     width: auto;
     display: block;
 }
@@ -748,7 +748,7 @@ header {
     position: relative;
     margin-bottom: 50px;
     padding-left: 60px;
-   
+
 }
 
 .timeline-dot {
@@ -1158,7 +1158,7 @@ body.dark-mode .date-badge {
         left: 0;
     }
 
-    
+
     #check:checked~.checkbtn .line1 {
         transform: rotate(45deg);
     }
@@ -1180,7 +1180,7 @@ body.dark-mode .date-badge {
         width: auto;
     }
 
-    
+
 
     .half2 img {
         width: 300px;
