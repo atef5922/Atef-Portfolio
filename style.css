@@ -726,12 +726,17 @@ header {
 /* --- 10. EDUCATION SECTION  --- */
 .education-section {
     padding: var(--section-padding);
-    background: var(--bg-light);
+    background: var(--white);
 }
 
 .experience-section {
     padding: var(--section-padding);
     background: var(--white);
+}
+
+.certifications-section {
+    padding: var(--section-padding);
+    background: var(--bg-light);
 }
 
 .timeline-container {
@@ -830,7 +835,7 @@ header {
 /*  CONTACT SECTION  */
 .contact-section {
     padding: var(--section-padding);
-    background: var(--white);
+    background: var(--bg-light);
 }
 
 
@@ -1302,6 +1307,7 @@ body.dark-mode .date-badge {
     .section3,
     .project-section,
     .experience-section,
+    .certifications-section,
     .education-section,
     .contact-section {
         padding: 70px 0;
